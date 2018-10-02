@@ -1,0 +1,9 @@
+The serialized result will be saved into  "serialize_engine_output.txt" in the form of string.
+
+In the main function,we can use it by following step:
+1.Defining a string ,such as "engine_s";
+2.Reading "serialize_engine_output.txt",and assign "engine_s" with the content of txt;
+3.Replacing "gieModelStream" with "engine_s" in the runtime->deserializeCudaEngine() function.
+
+//ICudaEngine* engine = runtime->deserializeCudaEngine(gieModelStream->data(), gieModelStream->size(), nullptr);
+  ICudaEngine* engine = runtime->deserializeCudaEngine(engine_s.data(), engine_s.size(), nullptr);
