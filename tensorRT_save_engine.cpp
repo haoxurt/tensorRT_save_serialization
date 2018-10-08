@@ -1,6 +1,6 @@
 /*************************************************************************
  * File Name: tensorRT_save_engine.cpp
- * Author: HaoXu Sima 
+ * Author: HaoXu 
  ************************************************************************/
 #include <assert.h>
 #include <fstream>
@@ -76,8 +76,8 @@ void caffeToGIEModel(const char* deployFile, const char* modelFile,
 
 int main()
 {
-    const char* prototxt = "/home/nvidia/tensorRT_save_engine/mnist.prototxt";
-    const char* caffemodel = "/home/nvidia/tensorRT_save_engine/mnist.caffemodel";
+    const char* prototxt = "./mnist.prototxt";
+    const char* caffemodel = "./mnist.caffemodel";
     const char* OUTPUT_BLOB_NAME = "prob";
     IHostMemory *gieModelStream{nullptr};
     std::string engine_resialize_save;
