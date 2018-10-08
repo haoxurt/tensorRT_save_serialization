@@ -62,7 +62,7 @@ void caffeToGIEModel(const char* deployFile, const char* modelFile,
     std::ofstream serialize_output_stream;
     serialize_str.resize(gieModelStream->size());   
     memcpy((void*)serialize_str.data(),gieModelStream->data(),gieModelStream->size());
-    serialize_output_stream.open("/home/nvidia/tensorRT_save_engine/serialize_engine_output.txt");
+    serialize_output_stream.open("./serialize_engine_output.txt");
     serialize_output_stream<<serialize_str;
     serialize_output_stream.close();
 
