@@ -30,12 +30,9 @@ class Logger : public ILogger
     }
 } ;
 static Logger gLogger;
-void caffeToGIEModel(const char* deployFile, 
-                     const char* modelFile, 
-					 const std::vector<std::string>& outputs, 
-					 unsigned int maxBatchSize, 
-					 IHostMemory *&gieModelStream,
-					 std::string& serialize_str)
+void caffeToGIEModel(const char* deployFile, const char* modelFile, 
+		const std::vector<std::string>& outputs, unsigned int maxBatchSize, 
+		IHostMemory *&gieModelStream, std::string& serialize_str)
 {
     // create the builder
     IBuilder* builder = createInferBuilder(gLogger);
